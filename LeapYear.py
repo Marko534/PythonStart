@@ -10,3 +10,4 @@ if x % 4 == 0:
     else:
         print("Isn't a leap year")
 
+#OVA E SAMO TEST
