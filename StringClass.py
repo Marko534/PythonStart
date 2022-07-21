@@ -15,7 +15,7 @@ class StringClass:
         self.zbor = zbor
         
     def print_String(self):
-        print (self.zbor)
+        print (self.zbor.upper())
         
 x = StringClass('Ova e test')
 x.print_String()
