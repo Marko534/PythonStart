@@ -28,7 +28,7 @@ class BinarySearchTree:
                 CurrentNode.RigthNode = Node(Value)
                 CurrentNode.RigthNode.ParentNode = CurrentNode
             else:
-                self._insert (Value, CurrentNode.LeftNode )
+                self._insert (Value, CurrentNode.RigthNode )
         else:
             print('Vece e vo drvoto i ne se tormozam so duplikati \n')
     
@@ -38,14 +38,12 @@ class BinarySearchTree:
             
     def _PrintTree(self, CurrentNode):
         if CurrentNode != None:
-            if self.LeftNode.Value != None:
-                self._PrintTree(self.LeftNode)
+            self._PrintTree(CurrentNode.LeftNode)
             print (str(CurrentNode.Value))
-            if self.RigthNode.Value != None:
-                self._PrintTree(self.RigthNode)
+            self._PrintTree(CurrentNode.RigthNode)
        
             
-def FillTree(Tree, NumberOfElements = 3, MaxInteger = 10000):
+def FillTree(Tree, NumberOfElements = 100, MaxInteger = 10000):
     from random import randint
     for _ in range(NumberOfElements):
         CurrentElement = randint(0, MaxInteger)
